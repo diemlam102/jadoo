@@ -2,12 +2,16 @@
 	margin: 0;
 	padding: 0;
 }
+body {
+	display: block;
+}
 
 .main {
+	padding-top:50px;
+	margin:-50px auto 0px auto;
 	width: 1440px ;
 	height: auto;
 	/* background-color: rgb(240, 227, 169); */
-    /* padding: 10px; */
 }
 
 /*  ------- DECORE--------- */
@@ -16,23 +20,24 @@
 	position: absolute;
 	width: 478.94px;
 	height: 496.86px;
-	left: -420px;
-	top: -59.84px;
-
-	/* d2 */
-
+	/* left: -420px;
+	top: -59.84px; */
 	background: #D5AEE4;
 	opacity: 0.3;
-	filter: blur(150px);
+	filter: blur(200px);
 }
 .decore__1 {
 	z-index: 0;
+	width: auto;
 	position: absolute;
 	margin-top: -20px;
 	margin-right: 0px;
 	margin-left: 737px;
 	width: 100px;
+	background-repeat:repeat;
+	opacity: 0.7;
 }
+
 
 /* ----- NAVBAR ------ */
 .navbar {
@@ -282,8 +287,15 @@
 	z-index: 2;
 	width: 100%;
     height: auto;
-    margin-top: 200px;
+    margin-top: 300px;
+	margin-bottom: 200px;
     /* background-color: rgb(25, 134, 134); */
+}
+.services__decore2 {
+	z-index: 0;
+	position: absolute;
+	float: right;
+	left: 1200px;
 }
 
 .services__subheading {
@@ -325,10 +337,9 @@
 .services__card {
     height: 315px;
 	width: 20%;
-    /* width: auto; */
     /* background-color: rgb(206, 159, 97); */
-    /* margin-top: 5px; */
     margin: 30px;
+	border: none;
 }
 .services__card img {
     width: 40%;
@@ -363,50 +374,51 @@
 	color: #5E6282;
 }
 
-.services__card--flights {
+.services__card--hover {
+	display: none;
+}
+
+.services__card--hover img {
+	margin-left: 0px;
+}
+
+.services__card:hover  {
     padding: 0px 20px 10px 10px;
 	background: #FFFFFF;
 	box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
 	border-radius: 0px 0px 0px 36px ;
 }
 
-.services__card--flightsdecore {
+.services__card:hover .services__card--hover {
+	display: block;
 	z-index: -1;
 	position: absolute;
 	margin-top: 215px;
 	margin-left: -40px;
-	/* background-color: #1E1D4C; */
 	width: 100%;
 }
-.services__card--flightsdecore img {
-	margin-left: 0px;
+
+
+/* DESTINATIONS */
+.destinatioscard {
+	margin-top: 100px;
+	padding: 20px;
+}
+.destinationscard__decore{
+	z-index: -1;
+	position: absolute;
+	float: right;
+	margin-top: 400px;
+	margin-left: 1240px;
 }
 
-
-/* ------ DESTINATIONS ----- */
-
-.destinations {
-    position: relative;
-	z-index: 2;
+.destinationscard__subheading {
 	width: 100%;
-    height: auto;
-    margin-top: 50px;
-    padding-bottom: 10px;
-    /* background-color: rgb(25, 134, 134); */
+	height: auto;
 }
 
-
-.destinations__subheading {
-    width: 100%;
-    height: 30px;
-    /* background-color: antiquewhite; */
-    margin-top: 10px;
-    padding-bottom: 5px;
-}
-.destinations__subheading h5 {
-    text-align: center;
-
-	font-family: Poppins;
+.destinationscard__subheading h5 {
+	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 600;
 	font-size: 18px;
@@ -415,80 +427,103 @@
 	color: #5E6282;
 }
 
-.destinations__heading {
-    height: 120px;
-    width: 100%;
-    /* background-color: antiquewhite; */
-    margin-top: 5px;
-    padding-bottom: 5px;
+.destinationscard__heading {
+	width: 100%;
+	height: auto;
+	margin-bottom: 40px;
 }
 
-.destinations__heading h4 {
-    font-size: 50px;
-	font-family: Volkhov;
+.destinationscard__heading h4 {
+	font-family: 'Volkhov';
 	font-style: normal;
-	font-weight: bold;
+	font-weight: 700;
+	font-size: 50px;
 	line-height: 64px;
 	text-align: center;
 	text-transform: capitalize;
 	color: #14183E;
 }
-.destinations__box {
-	margin-left: 50px;
-	/* background-color: #14183E; */
+
+.card-deck {
+	margin-top: 20px;
+	height: 700px;
+	margin-right: 15px;
+	margin-left: 15px;
 }
 
-.destinations__card {
-    height: 450px;
-    width: 315px;
-    border: none;
-    border-radius: 24px;
-	/* margin-right: 30px; */
-	margin-left: 50px;
-	/* background-color: #8A79DF; */
+.destinations__box1 {
+	background: url("./bootstrap/image/Rectangle 14.png") center/cover no-repeat;
+	padding-top: 420px;
+	background-size:150%;
+	border-radius: 24px;
 }
-.destinations__card img {
-	position: absolute;
-	width: 315px;
-	height: 450px;
+.destinations__box1__card {
+	/* position: absolute; */
+	background-color: #FFFFFF;
+	position:sticky;
+	bottom: 0px;
 	border-radius: 0px 0px 24px 24px;
 }
 
-.destinations__cardbody {
-	position: absolute;
-    width: 210px;
-    height: 100px;
-    position: absolute;
-    margin-top: 230px;
-    background-color: #FFFFFF;
-    z-index: 2;
-    border-radius: 0px 0px 24px 24px;
-    filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
-    margin-left: 52px;
+.destinations__box1__body .card-title {
+	width: 70%;
+	float: left;
 }
 
-.destinations__cardbody #money {
-	margin-left: 40px;
-    position: absolute;
+.destinations__box2 {
+	background: url("./bootstrap/image/Rectangle 15.png") center/cover no-repeat;
+	padding-top: 420px;
+	background-size:150%;
+	border-radius: 24px;
+}
 
+.destinations__box2__card {
+	/* position: absolute; */
+	background-color: #FFFFFF;
+	position:sticky;
+	bottom: 0px;
+	border-radius: 0px 0px 24px 24px;
 }
-.destinations__cardbody #addr {
-	width: 107px;
-	height: 22px;
-    
+.destinations__box2__body .card-title {
+	width: 70%;
+	float: left;
+}
 
+.destinations__box3 {
+	background: url("./bootstrap/image/Rectangle 16.png") center/cover no-repeat;
+	padding-top: 420px;
+	background-size:150%;
+	border-radius: 24px;
 }
-.destinations__cardbody p {
-    margin-top: 25px;
+.destinations__box3__card {
+	/* position: absolute; */
+	background-color: #FFFFFF;
+	position:sticky;
+	bottom: 0px;
+	border-radius: 0px 0px 24px 24px;
 }
-#money, #addr, .destinations__cardbody p {
-	font: Poppins;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 18px;
-	line-height: 124.5%;
-	color: #5E6282;
+.destinations__box3__body .card-title {
+	width: 75%;
+	float: left;
 }
+
+.card-text {
+	height: 30px;
+	/* background-color: #181E4B; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*  ---- BOOK A TRIP ------ */
@@ -503,23 +538,14 @@
     padding-bottom: 10px;
 }
 .trip__content1 {
-	
 	margin-top: 70px;
-	/* width: 370px;
-	height: 400px; */
+	width: 50%;
 	padding: 25px;
-	background-color: #FFFFFF;
-	box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-	border-radius: 26px;
+
 }
 
 .trip__supheading {
-	/* width: 511px;
-	height: 27px;
-	margin-left: 186px; */
-
 	width: 100%;
-
 }
 .trip__supheading h5 {
 	/* position: absolute; */
@@ -608,13 +634,13 @@
 
 .trip__content2 {
 	
-	margin-top: 70px;
+	margin-top: 120px;
 	width: 370px;
 	height: 400px;
 	padding: 25px;
 	background-color: #FFFFFF;
 	box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-border-radius: 26px;
+	border-radius: 26px;
 }
 
 
@@ -626,7 +652,7 @@ border-radius: 26px;
 	margin-left: 60px;
 	background: #59B1E6;
 	opacity: 0.8;
-	filter: blur(150px);
+	filter: blur(250px);
 
 }
 
@@ -1099,15 +1125,25 @@ border-radius: 26px;
 }
 
 /* Tablet and Mobile */
-@media screen and (max-width: 1024px) {
-
+@media screen and (max-width: 1400px) {
+	.destinationscard__decore, .services__decore2 {
+		display: none;
+	}
+	.subcribe__subcribe2, .subcribe__subcribe3 {
+		display: none;
+	}
 }
 
 /* Tablet */
 @media screen and (max-width: 1024px) {
+	/* DISPLAY: NONE */
     .decore__1, .decore__0, .hero__desc--decore {
         display: none;
     }
+	.destinationscard__decore, .services__decore2 {
+		display: none;
+	}
+
 	.navbar {
 		width: 100%;
 		position: sticky;
@@ -1222,19 +1258,23 @@ border-radius: 26px;
 	}
 
 	/* DESTINATION */
-	.destinations__subheading h5{
+	.destinationscard__subheading h5{
 		line-height:normal;
 		text-align: center;
 	}
-	.destinations__heading h4{
+	.destinationscard__heading h4{
 		line-height:normal;
 		text-align: center;
 		font-size: 40px;
 	}
-	.destinations__card {
+	.destinationscard {
 		margin-left: unset;
 	}
 
+	.destinations__box1__body,.destinations__box2__body, .destinations__box3__body  {
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
 
 	/* BOOK A TRIP */
 	.trip__content2--decore {
@@ -1551,14 +1591,20 @@ border-radius: 26px;
 		margin: 0;
 		padding: 0;
 	}
-	.hero__desc--decore {
+	/* DISPLAY: NONE */
+	.hero__desc--decore, .decore__1, .decore__0 {
+		display: none;
+	}
+	.hero__image, .destinationscard__decore, .services__decore2 {
 		display: none;
 	}
 	
+
+	/* NAVBAR */
 	.navbar {
 		margin: unset;
 		width: 100%;
-		position: sticky;
+		position:sticky;
 		top: 0px;
 		right: 0px;
 		z-index: 5;
@@ -1591,19 +1637,14 @@ border-radius: 26px;
 	/* HERO */
 	.hero {
 		margin: unset;
+		height: auto;
 	}
 	.hero__desc {
 		margin: unset;
+		height: 500px;
+		width: 100%;
 	}
-    .hero__image  {
-		margin-top: 60px;
-		margin-left: 30px;
-		margin-bottom: 30px;
-		width: 30%;
-		height: 300px;
-		
-		flex-direction: column;
-    }
+    
 	.hero__desc--red h5{
 		font-size: 12px;
 		height: auto;
@@ -1664,7 +1705,10 @@ border-radius: 26px;
 
 	/* SERVICES */
 	.services {
+		margin: unset;
 		margin-top: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 	.services__subheading h5 {
 		line-height:normal;
@@ -1681,7 +1725,7 @@ border-radius: 26px;
 	}
 	.services__card {
 		/* padding: 5px; */
-		width: 100%;
+		width: 90%;
 	}
 	.services__card--flights {
 		width: 100%;
@@ -1691,20 +1735,43 @@ border-radius: 26px;
 		font-size: 13px;
 	}
 
+	.services__card:hover  {
+		/* padding: 0px 20px 10px 10px; */
+		background: #FFFFFF;
+		box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+		border-radius: 0px 0px 0px 36px ;
+	}
+	
+	.services__card:hover .services__card--hover {
+		display: block;
+		z-index: -1;
+		position: absolute;
+		margin-top: 215px;
+		margin-left: -40px;
+		width: 80%;
+	}
+	
+
 	/* DESTINATION */
-	.destinations__subheading h5{
+	.destinationscard{
+		margin: unset;
+	}
+	.destinationscard__subheading h5{
 		line-height:normal;
 		text-align: center;
 	}
-	.destinations__heading h4{
+	.destinationscard__heading h4{
 		line-height:normal;
 		text-align: center;
 		font-size: 30px;
 	}
-	.destinations__card {
-		margin-top: 10px;
-		
-		margin-left: -50px;
+	.card-deck {
+		margin: unset;
+	}
+
+	.destinations__box1__body,.destinations__box2__body, .destinations__box3__body  {
+		margin-top: 25px;
+		margin-bottom: 25px;
 	}
 
 	/* BOOK A TRIP */
@@ -1948,6 +2015,12 @@ border-radius: 26px;
 @media screen and (max-width: 653px) {
 
 	/* HERO */
+	.hero__desc {
+		margin: unset;
+		height: 600px;
+		width: 100%;
+	}
+    
 	.hero__image  {
 		width: 40%;
 		margin-top: 60px;
@@ -1959,23 +2032,22 @@ border-radius: 26px;
 
 	.hero__desc--button {
 		/* background-color: #DF6951; */
-		width: 100%;
+		width: 90%;
 		/* margin-top: 140px; */
 	}
 
 	.btn-warning {
 		width: 80px;
 		height: 30px;
-
+		/* width: 100%; */
 	}
 	.btn-warning p{
 		font-size: 7px;
-		width: 100%;
+		
 	}
 
 	.hero__desc--playdemo {
-		/* background-color: #515fdf; */
-		width:100%;
+		/* width:100%; */
 	}
 	.hero__desc--playdemo img {
 		width: 10px;
@@ -1997,3 +2069,4 @@ border-radius: 26px;
 	}
 
 }
+
